@@ -308,3 +308,9 @@
   color: #8ca9c9;
   margin: 0;
 }
+
+.dashboard-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

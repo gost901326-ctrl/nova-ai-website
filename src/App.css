@@ -422,3 +422,65 @@ footer p {
     scroll-behavior: auto !important;
   }
 }
+
+
+.profile-nav-btn {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid #00aaff;
+  color: #fff;
+  background: linear-gradient(135deg, #006cff, #00baff);
+  font-size: 17px;
+  font-weight: 800;
+  box-shadow: 0 0 18px rgba(0,153,255,.25);
+  transition: .25s;
+}
+.profile-nav-btn:hover { transform: translateY(-2px); box-shadow: 0 0 24px rgba(0,153,255,.5); }
+.profile-nav-btn img { width: 100%; height: 100%; object-fit: cover; }
+
+.nova-collection-grid {
+  max-width: 850px;
+  margin: 32px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.nova-collection-card {
+  min-height: 190px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: right;
+  color: #fff;
+  border: 1px solid rgba(0,160,255,.25);
+  border-radius: 19px;
+  background: linear-gradient(145deg, rgba(9,30,65,.88), rgba(3,10,28,.95));
+  transition: transform .35s, border-color .35s, box-shadow .35s;
+  animation: appear .8s ease both;
+}
+.nova-collection-card:hover {
+  transform: translateY(-8px);
+  border-color: #00aaff;
+  box-shadow: 0 14px 40px rgba(0,132,255,.18);
+}
+.nova-collection-card.android-card { border-color: rgba(0,190,145,.28); }
+.nova-collection-card.android-card:hover { border-color: #00c99a; box-shadow: 0 14px 40px rgba(0,190,145,.15); }
+.collection-icon { font-size: 32px; color: #00baff; margin-bottom: 12px; }
+.android-card .collection-icon { color: #00d3a0; }
+.nova-collection-card strong { font-size: 18px; letter-spacing: 1.5px; }
+.nova-collection-card > span:not(.collection-icon) { margin-top: 6px; color: #a9bad2; font-size: 14px; }
+.nova-collection-card small { margin-top: 15px; color: #00baff; font-size: 12px; }
+.android-card small { color: #00d3a0; }
+
+@media (max-width: 800px) {
+  .nova-collection-grid { grid-template-columns: 1fr; }
+}
+
+.footer-links { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; margin: 12px 0; }
+.footer-links button { background: none; border: 0; color: #9fb8d0; cursor: pointer; font: inherit; }
+.footer-links button:hover, .footer-links button:focus-visible { color: #00baff; }
